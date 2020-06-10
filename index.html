@@ -26,8 +26,8 @@
 	</ul>
 	<button type="button" οnclick="alert(弹窗内容)">button</button><br>
 	<canvas id="标识记号">canvas</canvas><br>
-	<span>span</span>
-	<textarea rows="10" cols="30">textarea, 文本框</textarea>
+	<span>span</span><br>
+	<textarea rows="10" cols="30">textarea, 文本框</textarea><br>
 		<table border="1">table, 表格
 		<thead><!-- 和tbody，tfoot一样，不会对表格造成影响，但可以为每一行加单独的css -->
 			<tr>tr, 表格中的一行
@@ -43,8 +43,11 @@
 		</optgroup>
 	</select>
 	<section>section, 定义文档独立的一部分</section>
-	<input type="控件类型" name="控件名字" value="value">
+	<input type="控件类型" name="控件名字" value="value"><br>
 	<label>label, 单选控件类型</label>
+	<audio controls="controls"><!-- video用法相同 -->
+		<source src="链接地址" type="视频类型"><!-- source可以为图片，视频，音频元素指定资源 -->
+	</audio><br>
 	<hr/>
 	
 	<h1>===========字体===========</h1>					 
@@ -57,6 +60,20 @@
 	<small>small, 最小号字体</small>
 	<hr/>
 	
+	<h1>=========文本修饰=========</h1>
+	<del>del, 上删除线</del><br>
+	<s>s, 上删除线</s><br>
+	<ins>ins, 上下划线，表示修改</ins><br>
+	<u>u, 下划线</u><br>
+	<sub>sub, 下标</sub><br>
+	<sup>sup, 上标</sup><br>
+	<bdo dir="rtl">bdo, 文字倒序显示</bdo>
+	<hr/>
+	
+	<h1>===========引用===========</h1>
+	<blockquote cite="引用地址">blockquote, 带缩进的引用</blockquote>
+	<cite>cite, 引用，将变成斜体字</cite><br>
+	
 	<h1>===========其他===========</h1>
 	<abbr title="China">CN</abbr><!--定义缩写-->
 	<address><!--定义地址，签名，文档作者-->
@@ -68,15 +85,9 @@
 	<wbr><!-- 定义何处适合换行，窗口大小不够则不换行 -->
 	<article>article, 页眉（全局属性）</article>
 	<header>header, article内的介绍性内容</header>
-	<aside>aside, 可用作文章侧栏</aside><br>
+	<aside>aside, 可用作文章侧栏</aside>
 	<footer>footer, 页脚</footer>
-	<audio controls="controls"><!-- video用法相同 -->
-		<source src="链接地址" type="视频类型"><!-- source可以为图片，视频，音频元素指定资源 -->
-	</audio><br>
 	
-	<bdo dir="rtl">bdo, 文字倒序显示</bdo>
-	<blockquote cite="引用地址">blockquote, 被缩进的引用</blockquote>
-	<cite>cite, 引用，将变成斜体字</cite>
 	<caption>表格名字，出现在table里面</caption>
 	<col span="2" style="background-color:red"><!-- 我在table下的colgroup中使用，来设置表格的列属性值 -->
 	<colgroup>我把表格按列分组了</colgroup>
@@ -91,13 +102,6 @@
 		<summary>details, 点开看到很多</summary>
 		<p>很多</p>
 	</details><!--创建一个可折叠的东西，点开你能看到很多-->
-						 
-	<del>del, 上删除线</del><br>
-	<s>s, 上删除线</s><br>
-	<ins>ins, 上下划线，表示修改</ins><br>
-	<u>u, 下划线</u><br>
-	<sub>sub, 下标</sub>
-	<sup>sup, 上标</sup>
 						 
 	<dfn>反正我是斜的，定义项目</dfn><br>
 	<code>一段电脑代码</code><br>
