@@ -37,6 +37,7 @@
 		</thead>
 	</table>
 	<div class="属性" id="自己体会" lang="语言">div</div>
+	<var>var, 变量</var>
 	<select>select下拉菜单
 		<optgroup>optgroup分类
 			<option>option分类里面的选项</option>
@@ -44,7 +45,7 @@
 	</select>
 	<section>section, 定义文档独立的一部分</section>
 	<input type="控件类型" name="控件名字" value="value"><br>
-	<label>label, 单选控件类型</label>
+	<label>label, 单选控件类型</label><br>
 	<audio controls="controls"><!-- video用法相同 -->
 		<source src="链接地址" type="视频类型"><!-- source可以为图片，视频，音频元素指定资源 -->
 	</audio><br>
@@ -61,9 +62,9 @@
 	<hr/>
 	
 	<h1>=========文本修饰=========</h1>
-	<del>del, 上删除线</del><br>
-	<s>s, 上删除线</s><br>
-	<ins>ins, 上下划线，表示修改</ins><br>
+	<del>del, 删除线</del><br>
+	<s>s, 删除线</s><br>
+	<ins>ins, 下划线</ins><br>
 	<u>u, 下划线</u><br>
 	<sub>sub, 下标</sub><br>
 	<sup>sup, 上标</sup><br>
@@ -73,21 +74,30 @@
 	<h1>===========引用===========</h1>
 	<blockquote cite="引用地址">blockquote, 带缩进的引用</blockquote>
 	<cite>cite, 引用，将变成斜体字</cite><br>
+	<hr/>
 	
-	<h1>===========其他===========</h1>
-	<abbr title="China">CN</abbr><!--定义缩写-->
+	<h1>===========文章===========</h1>
 	<address><!--定义地址，签名，文档作者-->
-		rcw <a href="mailto:small_pupil@126.com"></a><br>
+		<a href="mailto:small_pupil@126.com">address, 作者信息</a><br>
 		tel:18127655676
 	</address>
-	<map>map, 带有可点击区域的图像</map>
-	<area shape="范围，tect/circle" coords="坐标" href="链接地址 alt="map中的可点击区域">
-	<wbr><!-- 定义何处适合换行，窗口大小不够则不换行 -->
 	<article>article, 页眉（全局属性）</article>
 	<header>header, article内的介绍性内容</header>
 	<aside>aside, 可用作文章侧栏</aside>
 	<footer>footer, 页脚</footer>
+	<hr/>
 	
+	<h1>=========代码文本=========</h1>
+	<code>code, 用于定义代码文本的样式，代码本身不执行</code><br>
+	<samp>samp, 定义代码输出示例样式，功能同code</samp><br>
+	<kbd>kbd, 定义"ctrl"+"C"样式，功能同code</kbd><br>
+	<dfn>dfn, 定义define element样式，功能同code</dfn><br>
+	<hr/>
+	
+	<h1>===========其他===========</h1>
+	<abbr title="China">CN</abbr><!--定义缩写-->
+	
+	<map>map, 带有可点击区域的图像</map>
 	<caption>表格名字，出现在table里面</caption>
 	<col span="2" style="background-color:red"><!-- 我在table下的colgroup中使用，来设置表格的列属性值 -->
 	<colgroup>我把表格按列分组了</colgroup>
@@ -101,13 +111,7 @@
 	<details>
 		<summary>details, 点开看到很多</summary>
 		<p>很多</p>
-	</details><!--创建一个可折叠的东西，点开你能看到很多-->
-						 
-	<dfn>反正我是斜的，定义项目</dfn><br>
-	<code>一段电脑代码</code><br>
-	<samp>计算机样本</samp><br>
-	<kbd>键盘输入</kbd><br>
-	<var>变量</var>
+	</details><!--创建一个可折叠的东西，点开你能看到很多-->						 
 	<dialog open>我差不多一个是个th的批注，但我很大，还不能隐藏</dialog>
 	<fieldset>我被用在form下，我下面的input属于我，哼</fieldset>
 	<legend>我替fieldset管理input</legend>
@@ -123,7 +127,7 @@
 		<param name="" value="">定义资源
 	</object>
 
-	<output>显示计算或用户操作的结果</output>
+	<output>output, 显示计算结果</output>
 	<pre>你怎样输入的，      我就怎么显示</pre>
 	<progress value="88" max="100"><!-- 下载任务完成88% -->	
 	<ruby>帅<rp>(</rp><rt>shuai</rt><rp>)</rp></ruby><!-- 作为注释标签使用表示很难懂，不知道为什么，但就是这样子 -->
