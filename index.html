@@ -9,6 +9,8 @@
 		body{
 			font-size:24px;
 			color:black;
+			position:absolute;
+			bottom:5%;
 		}	
 	</style>
 
@@ -24,7 +26,8 @@
 	<canvas id="标识记号">canvas</canvas><br>
 	<span>span</span><br>
 	<textarea rows="10" cols="30">textarea, 文本框</textarea><br>
-		<table border="1">table, 表格
+	<table border="1">table, 表格
+		<caption>caption, 表格名字</caption><br>
 		<thead><!-- 和tbody，tfoot一样，不会对表格造成影响，但可以为每一行加单独的css -->
 			<tr>tr, 表格中的一行
 				<th>th, 表头</th>
@@ -33,7 +36,7 @@
 		</thead>
 	</table>
 	<div class="属性" id="自己体会" lang="语言">div</div>
-	<var>var, 变量</var>
+	<var>var, 变量</var><br>
 	<select>select下拉菜单
 		<optgroup>optgroup分类
 			<option>option分类里面的选项</option>
@@ -91,15 +94,9 @@
 	<hr/>
 	
 	<h1>===========其他===========</h1>
-	<abbr title="China">CN</abbr><!--定义缩写-->
-	
-	<map>map, 带有可点击区域的图像</map>
-	<caption>表格名字，出现在table里面</caption>
-	<col span="2" style="background-color:red"><!-- 我在table下的colgroup中使用，来设置表格的列属性值 -->
+	<abbr title="China">CN</abbr><!--定义缩写--><br>
+	<map>map, 带有可点击区域的图像</map><br>
 	<colgroup>我把表格按列分组了</colgroup>
-	<datalist id="input的那个表格list">
-		<option value="我是input那个表格里的下拉选项"></option>
-	</datalist><!--我与input一起用，做出来的表格高大上呦，还能让用户选择-->
 	<dl><!--dl, 描述列表-->
 		<dt>dt, 描述主题</dt>
 		<dd>dd, 描述</dd>
@@ -107,8 +104,8 @@
 	<details>
 		<summary>details, 点开看到很多</summary>
 		<p>很多</p>
-	</details><!--创建一个可折叠的东西，点开你能看到很多-->						 
-	<dialog open>我差不多一个是个th的批注，但我很大，还不能隐藏</dialog>
+	</details>					 
+	<dialog open>dialog open, th的批注，不能隐藏</dialog>
 	<fieldset>我被用在form下，我下面的input属于我，哼</fieldset>
 	<legend>我替fieldset管理input</legend>
 	<figure><!--我是独立的，想引用谁就是谁-->
@@ -116,7 +113,6 @@
 	</figure>
 	<form action="把数据存起来，怎么样" method="传输方式post/get">我向服务器传输数据</form>
 	<hgroup>hgroup, 标题集合</hgroup>
-	
 	<meter value="2" min="0" max="10">0到10之间，输出2，相当于20%</meter>
 	<nav>nav, 导航链接，索引，目录，菜单</nav>
 	<object>object, 外部资源
