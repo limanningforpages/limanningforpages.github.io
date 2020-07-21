@@ -1,0 +1,42 @@
+
+<html lang="en"><head>
+    <title>Title of the document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        video {
+            width: 100vw;
+            height: 60vw;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+	<p>blob/base64 video</p>
+    <input type="file" id="file">
+	</center>
+    <script>
+        document.querySelector("#file").onchange = function() {
+            let fr = new FileReader();
+            fr[location.hash ? 'readAsDataURL' : 'readAsArrayBuffer'](this.files[0]);
+            fr.onload = function(e) {
+                let video = document.createElement("video");
+                video.setAttribute("controls", "controls");
+                video.setAttribute("preload", "auto");
+                let url = e.target.result;
+				// console.debug("mytest_media qqq url:" + url);
+                if (typeof url === "object") {
+                    url = window.URL.createObjectURL(new Blob([url]));
+                }
+	
+                video.src = url;
+				console.debug("mytest_media video.src:" + video.src);
+                document.body.appendChild(video);
+            };
+        };
+    </script>
+</body></html>
