@@ -18,14 +18,14 @@ h1 {
 <script type="text/javascript">
 function a(){
   var total = "";
-  var d = document.getElementById("d");
-  var p = document.createElement("p");  
+  var d1 = document.getElementById("d");
+  var p1 = document.createElement("p");  
    
   for (var i = 0; i < 10000; i++) { 
     total = total + i.toString();
     var txt = document.createTextNode(total);
-    p.appendChild(txt);
-    d.appendChild(p);
+    p1.appendChild(txt);
+    d1.appendChild(p1);
     // history.pushState(0, 0, total);   
   }
 }
