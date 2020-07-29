@@ -14,10 +14,11 @@ h1 {
 </style>
 
 <script type="text/javascript">
-function aaa()
-{
-  alert('aaa');
-  aaa();
+function a(){
+  b();
+}
+function b(){
+  a();
 }
 </script>
 
@@ -25,7 +26,7 @@ function aaa()
 <body>
 
 <h1>My First CSS Example</h1>
-<button type="button" onclick="aaa()">死循环</button>
+<button type="button" onclick="a()">死循环</button>
 
 </body>
 </html>
