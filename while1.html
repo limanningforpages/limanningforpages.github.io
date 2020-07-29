@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+  
 <head>
+  
 <style>
 body {
   background-color: lightblue;
@@ -16,19 +18,24 @@ h1 {
 <script type="text/javascript">
 function a(){
   var total = "";
+  var d = document.getElementById("d");
+  var p = document.createElement("p");  
+   
   for (var i = 0; i < 10000; i++) { 
-    total = total + i.toString(); 
-    // history.pushState(0, 0, total);
-    console.log(total);
+    total = total + i.toString();
+    var txt = document.createTextNode(total);
+    p.appendChild(txt);
+    d.appendChild(p2);
+    // history.pushState(0, 0, total);   
   }
 }
 </script>
 
 </head>
+  
 <body>
-
 <h1>My First CSS Example</h1>
 <button type="button" onclick="a()">死循环</button>
-
+<div id = "d"></div>
 </body>
 </html>
