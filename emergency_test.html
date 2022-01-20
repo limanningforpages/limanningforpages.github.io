@@ -7,9 +7,17 @@
 </head>
 <body>
    
-<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
-您的浏览器不支持 HTML5 canvas 标签。
-</canvas>
+<canvas width="1080" height="391" style="touch-action: none; width: 360px; height:130.435px; position: fixed; bottom: 0px;
+                                         left: 0px; z-index: 299; cursor: inherit;">
+
+   <script>
+      window.onload = function(){
+      var canvas = document.getElementById("canvas");
+      var ctx=canvas.getContext("2d");
+      ctx.fillStyle="#0000ff";
+      ctx.fillRect(20,20,150,100);
+    }
+   </script>
 
 </body>
 </html>
