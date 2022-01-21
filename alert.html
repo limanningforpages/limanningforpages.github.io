@@ -34,6 +34,39 @@ context.fill();
 context.stroke();
 
 </script>
+  
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+  
+//设置填充及描边颜色
+context.fillStyle = "rgb(100,150,185)";
+context.lineWidth = 10;
+context.strokeStyle = "red";
+//绘制圆形
+context.arc(110, 90, 80, 0, 2*Math.PI);
+context.fill();
+context.stroke();
+ 
+//调用beginPath()绘制新形状
+context.beginPath();
+ 
+//用半透明的颜色填充三角形
+context.fillStyle = "rgba(100,150,185,1)";
+//绘制三角形
+context.moveTo(215,50);
+context.lineTo(25,190);
+context.lineTo(315,190);
+context.closePath();
+context.fill();
+context.stroke();
+
+</script>
 
     
 </head>
