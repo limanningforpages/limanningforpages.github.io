@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3; opacity: 0.987654">
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3 opacity: 0.987654">
 Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script type="text/javascript">
@@ -11,10 +11,6 @@ var c=document.getElementById("myCanvas");
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext("2d");
   
-//设置填充及描边颜色
-context.fillStyle = "rgb(100,150,185)";
-context.lineWidth = 10;
-context.strokeStyle = "red";
 //绘制圆形
 context.arc(110, 90, 80, 0, 2*Math.PI);
 context.fill();
@@ -44,10 +40,6 @@ var c=document.getElementById("myCanvas1");
 var canvas = document.getElementById("myCanvas1");
 var context = canvas.getContext("2d");
   
-//设置填充及描边颜色
-context.fillStyle = "rgb(100,150,185)";
-context.lineWidth = 10;
-context.strokeStyle = "red";
 //绘制圆形
 context.arc(110, 90, 80, 0, 2*Math.PI);
 context.fill();
