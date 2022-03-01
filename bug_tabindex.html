@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>半屏demo</title>
+    <style>
+        *, html {
+            padding: 0;
+            margin: 0;
+        }
+        html, body {
+            height: 100%;
+            font-size: 50px;
+        }
+        html::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            color: transparent !important;
+            display: none !important;
+        }
+        .wrapper1 {
+            background-color: green;
+            height: 200px;
+        }
+        .wrapper2 {
+            background-color: burlywood;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper1" ontouchstart="handler1()" >NO tabindex</div>
+<div class="wrapper2" ontouchstart="handler2()" tabindex="0" > Tabindex = 0</div>
+<script>
+    function handler1(e) {
+        alert("ontouchstart without tabindex");
+        console.log("ontouchstart without tabindex", e);
+    }
+    function handler2(e) {
+        alert("ontouchstart && tabindex");
+        console.log("ontouchstart && tabindex", e);
+    }
+</script>
+
+
+</body>
+</html>
