@@ -19,9 +19,13 @@
 	jQuery('#qrcodeTable').qrcode({
 		render	: "table",
 		text	: "http://jetienne.com"
-	});	
+	});
+	var codetype = "canvas";
 	jQuery('#qrcodeCanvas').qrcode({
-		text	: "http://jetienne.com"
+		render: codetype,
+                width: 100, //宽度
+                height: 90, //高度
+                text: 'https://m.jjwxc.net/book2/3886659'
 	});	
 </script>
 
