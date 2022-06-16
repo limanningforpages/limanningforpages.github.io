@@ -8,8 +8,8 @@
 
 <style>
 	.qr-code {
-	max-width: 200px;
-	margin: 10px;
+		width: 100px;
+		height: 90px;
 	}
 </style>
 
@@ -27,7 +27,12 @@
 "https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
 		class="qr-code img-thumbnail img-responsive" />
 	</div>
-</div>
+	
+	<div id="qrcode"></div>
+		<script type="text/javascript">
+		new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+		</script>
+	</div>
 <script src=
 	"https://code.jquery.com/jquery-3.5.1.js">
 </script>
