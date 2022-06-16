@@ -10,16 +10,10 @@
 <script type="text/javascript" src="../js/jquery.qrcode.js"></script>
 <script type="text/javascript" src="../js/qrcode.js"></script>
 
-<p>Render in table</p>
-<div id="qrcodeTable"></div>
 <p>Render in canvas</p>
 <div id="qrcodeCanvas"></div>
 <script>
 	//jQuery('#qrcode').qrcode("this plugin is great");
-	jQuery('#qrcodeTable').qrcode({
-		render	: "table",
-		text	: "http://jetienne.com"
-	});
 	var codetype = "canvas";
 	jQuery('#qrcodeCanvas').qrcode({
 		render: codetype,
