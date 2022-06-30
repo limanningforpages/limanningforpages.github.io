@@ -8,10 +8,10 @@ window
 		console.log(colorScheme);
 
 		if (colorScheme === "dark") {
-			body.style.backgroundColor = "#green";
+			body.style.backgroundColor = "green";
 			content.setAttribute("class", "dark");
 		} else {
-			body.style.backgroundColor = "#blue";
+			body.style.backgroundColor = "blue";
 			content.setAttribute("class", "light");
 		}
 	});
