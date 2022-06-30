@@ -5,9 +5,9 @@ let body = document.querySelector("body");
 let content = document.getElementById("content");
 
 if (dark) {
-	body.style.backgroundColor = "#1a1a1a";
+	body.style.backgroundColor = "#green";
 	content.setAttribute("class", "dark");
 } else {
-	body.style.backgroundColor = "#f5f5f5";
+	body.style.backgroundColor = "#blue";
 	content.setAttribute("class", "light");
 }
