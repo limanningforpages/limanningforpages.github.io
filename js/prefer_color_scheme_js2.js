@@ -1,5 +1,5 @@
 let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-console.log(matched);
+console.log(dark);
 
 let content = document.getElementById("content");
 
