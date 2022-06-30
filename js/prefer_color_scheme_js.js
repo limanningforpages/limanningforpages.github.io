@@ -1,4 +1,3 @@
-// let body = document.querySelector("body");
 let content = document.getElementById("content");
 
 window
