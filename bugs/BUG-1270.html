@@ -13,8 +13,8 @@
 <!--<p>Render in canvas small</p>-->
 <div id="qrcodeCanvasSmall"></div>
 	
-<!--<p>Render in canvas midium</p>
-<div id="qrcodeCanvasMedium"></div>-->
+<!--<p>Render in canvas midium</p>-->
+<div id="qrcodeCanvasMedium"></div>
 
 <!--
 <p>Render in canvas big</p>
@@ -32,6 +32,8 @@
 	});	
 	jQuery('#qrcodeCanvasMedium').qrcode({
 		render: codetype,
+		width: 200, //宽度
+                height: 200, //高度
                 text: 'https://m.jjwxc.net/book2/3886659'
 	});
 	jQuery('#qrcodeCanvasBig').qrcode({
