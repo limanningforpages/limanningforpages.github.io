@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>basic example</title>
+</head>
+<body>
+<script src="https://libs.baidu.com/jquery/1.5.2/jquery.min.js"></script>
+
+<!--<script type="text/javascript" src="../jquery.qrcode.min.js"></script>-->
+<script type="text/javascript" src="../js/jquery.qrcode.js"></script>
+<script type="text/javascript" src="../js/qrcode.js"></script>
+
+<!--<p>Render in canvas small</p>
+<div id="qrcodeCanvasSmall"></div>-->
+	
+<!--<p>Render in canvas midium</p>-->
+<div id="qrcodeCanvasMedium"></div>
+
+<!--
+<p>Render in canvas big</p>
+<div id="qrcodeCanvasBig"></div>
+-->
+
+<script>
+	//jQuery('#qrcode').qrcode("this plugin is great");
+	var codetype = "canvas";
+	jQuery('#qrcodeCanvasSmall').qrcode({
+		render: codetype,
+		width: 100, //宽度
+                height: 100, //高度
+                text: 'https://m.jjwxc.net/book2/3886659'
+	});	
+	jQuery('#qrcodeCanvasMedium').qrcode({
+		render: codetype,
+		width: 200, //宽度
+                height: 200, //高度
+                text: 'https://m.jjwxc.net/book2/3886659'
+	});
+	jQuery('#qrcodeCanvasBig').qrcode({
+		render: codetype,
+		width: 400, //宽度
+                height: 400, //高度
+                text: 'https://m.jjwxc.net/book2/3886659'
+	});
+</script>
+
+</body>
+</html>
