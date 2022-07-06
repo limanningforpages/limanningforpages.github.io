@@ -12,27 +12,27 @@
 
  
 let {Application,Graphics} = PIXI
-        console.log(Application,Graphics,PIXI)
-        const app = new Application({
-                    transparent: true,
-                    autoDensity: true,
-                    antialias: true,
-                    width: window.innerWidth,
-                    height:window.innerHeight
-                });
+   console.log(Application,Graphics,PIXI)
+   const app = new Application({
+         transparent: true,
+         autoDensity: true,
+         antialias: true,
+         width: window.innerWidth,
+         height:window.innerHeight
+      });
 
-            const graphics = new this.PIXI.Graphics();
-            graphics.beginFill(0x0099ff);
-            graphics.arc(406, 97, 93, 0, 2 * Math.PI);
-            graphics.arc(-406, 97, 93, 0, 2 * Math.PI);
-            graphics.drawRect(-406, -10, 812, 206);
-            graphics.endFill();
-            app.stage.addChild(graphics);
-            app.view.style.position = 'fixed';
-                app.view.style.top = 0;
-                app.view.style.left = 0;
-                app.view.style.zIndex = 299;
-        document.body.append(app.view);
+   const graphics = new this.PIXI.Graphics();
+   graphics.beginFill(0x0099ff);
+   graphics.arc(406, 97, 93, 0, 2 * Math.PI);
+   graphics.arc(-406, 97, 93, 0, 2 * Math.PI);
+   graphics.drawRect(-406, -10, 812, 206);
+   graphics.endFill();
+   app.stage.addChild(graphics);
+   app.view.style.position = 'fixed';
+   app.view.style.top = 0;
+   app.view.style.left = 0;
+   app.view.style.zIndex = 299;
+   document.body.append(app.view);
 </script>
    
    <canvas width="1792" height="908" style="touch-action: none; width: 1792px; height: 908px; position: fixed; top: 0px; left: 0px; z-index: 299; cursor: inherit; opacity: 0.5;"></canvas>
