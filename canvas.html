@@ -1,10 +1,44 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
 <body>
-
-<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
-Your browser does not support the HTML canvas tag.
-</canvas>
-
+    <canvas id="cvs" style="opacity:0.5;"></canvas>
+    <script>
+        var cvs = document.getElementById('cvs');
+        var ctx = cvs.getContext('2d');
+ 
+        /*
+        * 填充：
+        * 把当前路径环绕起来的区域进行填充。
+        * ctx.fill()
+        * */
+ 
+        /*
+         * 填充色：
+         * ctx.fillStyle = 颜色表示
+         * */
+ 
+        // 封装一个绘制矩形的函数
+        function juXing( startX, startY, width, height, lineWidth, strokeStyle, fillStyle ) {
+            ctx.moveTo( startX, startY );
+            ctx.lineTo( startX + width, startY );
+            ctx.lineTo( startX + width, startY + height );
+            ctx.lineTo( startX, startY + height );
+            ctx.closePath();
+            ctx.lineWidth = lineWidth;
+            ctx.strokeStyle = strokeStyle;  //描边颜色
+            ctx.fillStyle = fillStyle;  //填充颜色
+ 
+            ctx.fill();  //填充
+            ctx.stroke();  //描边
+        }
+ 
+        juXing( 20, 20, 100, 100, 6, 'red', 'green' );
+        
+    </script>
 </body>
 </html>
