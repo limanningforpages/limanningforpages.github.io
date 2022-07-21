@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0,minimal-ui">
+    <title>css3</title>
+    <style type="text/css">
+        .p_before:before {
+            content: 'H';
+            color: #01B4EE;
+        }
+        .p_beforeImg {
+            background: #eeeeee;
+            width: 200px;
+            height: 80px;
+            border-radius: 6px;
+            padding: 10px 20px;
+            position: relative;
+
+        }
+        .p_beforeImg:before {
+            content: '';
+            background: url('https://limanningforpages.github.io/images/test1.jpg') no-repeat top left /32px 16px;/*兼容没测*/
+            position: absolute;
+            top: -15px;
+            z-index: 2;
+            width: 32px;
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+    <p class="p_before">ello Word（H是通过before添加的文字）</p>
+    <p class="p_beforeImg">通过before添加三角尖图片</p>
+</body>
+</html>
