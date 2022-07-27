@@ -3,6 +3,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style type="text/css">
+        <style>
+    fieldset {
+      background-color: blue;
+    }
+    @media (prefers-color-scheme: dark) {
+      fieldset {
+        background-color: green;
+      }
+    }
+  </style>
         .p_beforeImg {
             width: 200px;
             height: 80px;
@@ -13,6 +23,11 @@
         }
         .p_beforeImg:before {
             content: url('https://limanningforpages.github.io/images/test1.jpg')
+        }
+        @media (prefers-color-scheme: dark) {
+          .p_beforeImg:before {
+            content: url('https://limanningforpages.github.io/images/16pic_5326745_b.jpg')
+          }
         }
     </style>
 </head>
