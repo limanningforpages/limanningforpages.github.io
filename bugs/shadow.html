@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-div.card {
-  width: 250px;
-  box-shadow: 0 0 0.07rem 0.093rem rgb(242 242 254 / 80%)
-  text-align: center;
+<style> 
+#example1 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
 }
 
-div.header {
-  background-color: #4CAF50;
-  color: white;
+#example2 {
+  border: 1px solid;
   padding: 10px;
-  font-size: 40px;
+  box-shadow: 0 0 0.07rem 0.093rem rgb(242 242 254 / 80%);
 }
 
-div.container {
+#example3 {
+  border: 1px solid;
   padding: 10px;
+  box-shadow: 5px 10px red;
 }
 </style>
 </head>
 <body>
 
-<h1>Create Cards</h1>
+<h1>The box-shadow Property</h1>
+<p>The box-shadow property defines the shadow of an element:</p>
 
-<p>The box-shadow property can be used to create paper-like cards:</p>
+<h2>box-shadow: 5px 10px:</h2>
+<div id="example1">
+  <p>A div element with a shadow. The first value is the horizontal offset and the second value is the vertical offset. The shadow color will be inherited from the text color.</p>
+</div>
 
-<div class="card">
-  <div class="header">
-    <h1>1</h1>
-  </div>
+<h2>box-shadow: 5px 10px #888888:</h2>
+<div id="example2">
+  <p>You can also define the color of the shadow. Here the shadow color is grey.</p>
+</div>
 
-  <div class="container">
-    <p>January 1, 2021</p>
-  </div>
+<h2>box-shadow: 5px 10px red:</h2>
+<div id="example3">
+  <p>A red shadow.</p>
 </div>
 
 </body>
