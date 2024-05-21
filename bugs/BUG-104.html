@@ -1,15 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>常见格式/编码视频</title>
+	<meta charset="UTF-8">
+	<meta name="referrer" content="no-referrer">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div>
+	<div align="center">
+	    <p style="font-size: 16px; font-weight: bold;">常见格式/编码视频测试列表</p>
+		<table border="1">
+			<tr align="center">
+				<td>test.mp4</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<video  id="myVideo" t7-video-player-type="media" src="https://p2.bdstatic.com/rtmp.liveshow.lss-user.baidubce.com/live/stream_bduid_1612618654_3621101894/recording_20200514154800_9411_12730.m3u8" width="300px" height="200px" controls="controls">
+						Your browser does not support HTML5 video.
+					</video>
+					<!-- <video  id="myVideo" t7-video-player-type="media" width="300px" height="200px" src="https://v-edee2st.com:10443/v/02439fd5a52885c600390cfb1e97dfa4/index.m3u8">
+						Your browser does not support HTML5 video.
+					</video> -->
+				</td>
+				
+			</tr>
+		</table>
+		<!-- <div>
+					<button onclick="playVideo()">点击播放</button>
+				</div>
+				<div>
+					<button onclick="pauseVideo()">暂停播放</button>
+				</div>
+	</div> -->
+	<script type="text/javascript">  
+// 	function playVideo() {
+//   // console.log("playVideo");
+//   // var video = document.getElementById("myVideo");
+//   // video.src = "https://v-edee2st.com:10443/v/02439fd5a52885c600390cfb1e97dfa4/index.m3u8";
+//   // video.play();
+// }
+// function pauseVideo() {
+//   var video = document.getElementById("myVideo");
+//   video.pause();
+// }
+
+// setTimeout(playVideo(), 5000);
+// 获取音频元素  
+// var x = document.getElementById("myVideo");   
   
-<input type="submit" value="搜索">
-
-</div>
-
+// // 创建一个函数来实现循环播放  
+// function loopPlay() {  
+//   x.loop = true; // 设置为循环播放  
+// }  
+  
+// // 创建一个函数来停止循环播放  
+// function stopLoop() {  
+//   x.loop = false; // 设置为不循环播放  
+// }
+// var video = document.getElementById('myVideo');  
+// video.addEventListener('ended', function() {
+// 	// window.alert('ended');
+// 	// window.alert('ended');
+// 	// video.loop = true;
+//     // 当视频播放结束时，重新设置播放位置到视频开头  
+//     // video.load();
+//     video.currentTime = 0.1;
+//     video.play();
+// }, false);
+</script>  
 </body>
 </html>
