@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Autofill Test (Safari)</title>
+  <style>
+    body { font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:24px; color:#111; background:#fff; }
+    .wrap { max-width:820px; margin:0 auto; }
+    h1 { font-size:1.2rem; margin-bottom:6px; }
+    p.note { color:#444; margin-top:0; font-size:0.95rem; }
+    form { background:#fafafa; border:1px solid #eee; padding:16px; border-radius:8px; margin-top:12px; }
+    .row { display:flex; gap:12px; margin-bottom:10px; }
+    .col { flex:1; min-width:140px; }
+    label { display:block; font-size:0.9rem; margin-bottom:6px; color:#333; }
+    input, select { width:100%; padding:8px 10px; border:1px solid #ccc; border-radius:6px; font-size:0.95rem; box-sizing:border-box; }
+    .actions { display:flex; gap:8px; margin-top:10px; }
+    button { padding:8px 12px; border-radius:6px; border:0; background:#0b73ff; color:#fff; cursor:pointer; }
+    pre { background:#f6f6f8; padding:10px; border-radius:6px; margin-top:14px; overflow:auto; }
+    .hint { font-size:0.88rem; color:#666; margin-top:6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Contact Autofill Test</h1>
+    <p class="note">
+      Use this page to test Safari's Contacts autofill. <strong>Before testing</strong>:
+      <ol>
+        <li>Ensure Safari Preferences → AutoFill → <em>Using info from my contacts</em> is enabled.</li>
+        <li>Have a contact saved in macOS/iOS Contacts with full name, email, phone, and address.</li>
+        <li>Open this page over <strong>HTTPS</strong> (recommended). Click into a field and choose the autofill suggestion.</li>
+      </ol>
+    </p>
+
+    <form id="contactForm" autocomplete="on" action="javascript:void(0);">
+      <div class="row">
+        <div class="col">
+          <label for="given">Given name</label>
+          <input id="given" name="given-name" autocomplete="given-name" type="text" placeholder="First name">
+        </div>
+        <div class="col">
+          <label for="additional">Additional name</label>
+          <input id="additional" name="additional-name" autocomplete="additional-name" type="text" placeholder="Middle name">
+        </div>
+        <div class="col">
+          <label for="family">Family name</label>
+          <input id="family" name="family-name" autocomplete="family-name" type="text" placeholder="Last name">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="email">Email</label>
+          <input id="email" name="email" autocomplete="email" type="email" placeholder="you@example.com">
+        </div>
+        <div class="col">
+          <label for="tel">Telephone</label>
+          <input id="tel" name="tel" autocomplete="tel" type="tel" placeholder="+41 79 000 00 00">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="addr1">Address line 1</label>
+          <input id="addr1" name="address-line1" autocomplete="address-line1" type="text" placeholder="Street and number">
+        </div>
+        <div class="col">
+          <label for="addr2">Address line 2</label>
+          <input id="addr2" name="address-line2" autocomplete="address-line2" type="text" placeholder="Apartment, suite, etc.">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="city">City</label>
+          <input id="city" name="address-level2" autocomplete="address-level2" type="text" placeholder="City">
+        </div>
+        <div class="col">
+          <label for="region">State / Province</label>
+          <input id="region" name="address-level1" autocomplete="address-level1" type="text" placeholder="State / Province">
+        </div>
+        <div class="col">
+          <label for="postal">Postal code</label>
+          <input id="postal" name="postal-code" autocomplete="postal-code" type="text" placeholder="Postal code">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="country">Country</label>
+          <input id="country" name="country" autocomplete="country" type="text" placeholder="Country">
+        </div>
+        <div class="col">
+          <label for="org">Organization</label>
+          <input id="org" name="organization" autocomplete="organization" type="text" placeholder="Company">
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="show" type="button">Show values (console & preview)</button>
+        <button id="clear" type="button" style="background:#777;">Clear</button>
+      </div>
+
+      <p class="hint">Tip: click an input (e.g., "Given name" or "Email") to trigger Safari's autofill suggestion, then choose a contact to fill the form.</p>
+    </form>
+
+    <pre id="preview">{ }</pre>
+  </div>
+
+  <script>
+    function collect() {
+      const out = {};
+      document.querySelectorAll('#contactForm [name]').forEach(el => {
+        out[el.getAttribute('name')] = el.value;
+      });
+      return out;
+    }
+
+    document.getElementById('show').addEventListener('click', function(){
+      const data = collect();
+      document.getElementById('preview').textContent = JSON.stringify(data, null, 2);
+      console.log('Autofill test data:', data);
+    });
+
+    document.getElementById('clear').addEventListener('click', function(){
+      document.querySelectorAll('#contactForm [name]').forEach(el => el.value = '');
+      document.getElementById('preview').textContent = '{ }';
+    });
+
+    // Optional: update preview after any change (useful to see fills instantly)
+    document.querySelectorAll('#contactForm [name]').forEach(el => {
+      el.addEventListener('input', () => {
+        document.getElementById('preview').textContent = JSON.stringify(collect(), null, 2);
+      });
+    });
+  </script>
+</body>
+</html>
